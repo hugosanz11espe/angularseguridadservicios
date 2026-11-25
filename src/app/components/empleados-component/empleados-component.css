@@ -1,0 +1,157 @@
+:host {
+  display: block;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1f2937;
+}
+
+/* Cabecera */
+.cabecera {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.cabecera h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitulo {
+  color: #6b7280;
+  margin: 0.5rem 0 1rem;
+}
+
+.contador {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Cuadrícula */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Tarjeta */
+.tarjeta {
+  --c1: #3b82f6;
+  --c2: #8b5cf6;
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  padding: 0 1.25rem 1.25rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+}
+
+.banda {
+  height: 80px;
+  margin: 0 -1.25rem;
+  background: linear-gradient(135deg, var(--c1), var(--c2));
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  margin: -36px auto 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--c1), var(--c2));
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nombre {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.oficio {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--c1);
+  background: #f3f4f6;
+}
+
+/* Pie con datos */
+.pie {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.dato {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.dato-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+}
+
+.dato-valor {
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Colores por departamento */
+.color-0 { --c1: #000000; --c2: #f0ba08; }
+.color-1 { --c1: #10b981; --c2: #06b6d4; }
+.color-2 { --c1: #020202; --c2: #2a9def; }
+.color-3 { --c1: #ec4899; --c2: #8b5cf6; }
+
+/* Sin datos */
+.vacio {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f9fafb;
+  border: 2px dashed #d1d5db;
+  border-radius: 16px;
+  color: #6b7280;
+}
+
+.vacio-icono {
+  font-size: 3rem;
+}
+
+@media (max-width: 600px) {
+  .cabecera h1 {
+    font-size: 1.8rem;
+  }
+}

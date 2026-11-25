@@ -1,0 +1,35 @@
+<section class="perfil" *ngIf="empleado; else cargando">
+  <div class="tarjeta">
+    <div class="corona">
+      <div class="avatar">{{ empleado.apellido.charAt(0) | uppercase }}</div>
+    </div>
+
+    <h1 class="nombre">{{ empleado.apellido }}</h1>
+    <span class="oficio">{{ empleado.oficio }}</span>
+
+    <div class="separador">
+      <span class="linea"></span>
+      <span class="rombo">◆</span>
+      <span class="linea"></span>
+    </div>
+
+    <ul class="datos">
+      <li>
+        <span class="etiqueta">ID de empleado</span>
+        <span class="valor">#{{ empleado.idEmpleado }}</span>
+      </li>
+      <li>
+        <span class="etiqueta">Oficio</span>
+        <span class="valor">{{ empleado.oficio }}</span>
+      </li>
+      <li>
+        <span class="etiqueta">Departamento</span>
+        <span class="valor">{{ empleado.idDepartamento }}</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<ng-template #cargando>
+  <p class="cargando">Cargando perfil...</p>
+</ng-template>

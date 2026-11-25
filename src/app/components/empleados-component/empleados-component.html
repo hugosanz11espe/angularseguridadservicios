@@ -1,0 +1,40 @@
+<header class="cabecera">
+  <h1>Nuestro equipo</h1>
+  <p class="subtitulo">Conoce a las personas que forman la plantilla</p>
+  <span class="contador" *ngIf="arrayempleados.length > 0">
+    👥 {{ arrayempleados.length }} empleados
+  </span>
+</header>
+
+<section class="grid" *ngIf="arrayempleados.length > 0; else sinDatos">
+  <article
+    class="tarjeta"
+    *ngFor="let emp of arrayempleados"
+    [ngClass]="'color-' + (emp.idDepartamento % 4)"
+  >
+    <div class="banda"></div>
+
+    <div class="avatar">{{ emp.apellido.charAt(0) | uppercase }}</div>
+
+    <h2 class="nombre">{{ emp.apellido }}</h2>
+    <span class="oficio">{{ emp.oficio }}</span>
+
+    <div class="pie">
+      <div class="dato">
+        <span class="dato-label">ID</span>
+        <span class="dato-valor">#{{ emp.idEmpleado }}</span>
+      </div>
+      <div class="dato">
+        <span class="dato-label">Departamento</span>
+        <span class="dato-valor">{{ emp.idDepartamento }}</span>
+      </div>
+    </div>
+  </article>
+</section>
+
+<ng-template #sinDatos>
+  <div class="vacio">
+    <span class="vacio-icono">📭</span>
+    <p>No hay empleados para mostrar.</p>
+  </div>
+</ng-template>

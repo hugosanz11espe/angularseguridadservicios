@@ -1,0 +1,124 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: radial-gradient(circle at top, #1a1a1a 0%, #000000 70%);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 380px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color: #f5f5f5;
+  background: linear-gradient(160deg, #141414, #050505);
+  border: 1px solid #d4af37;
+  border-radius: 20px;
+  box-shadow:
+    0 0 0 6px rgba(212, 175, 55, 0.08),
+    0 20px 50px rgba(0, 0, 0, 0.7),
+    0 0 40px rgba(212, 175, 55, 0.12);
+}
+
+.icono {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: #000000;
+  border: 3px solid #d4af37;
+  border-radius: 50%;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f6e27a;
+}
+
+.subtitulo {
+  margin: 0.5rem 0 1.75rem;
+  font-size: 0.9rem;
+  color: #9a9a9a;
+}
+
+.campo {
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d4af37;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: #f5f5f5;
+  background: #0b0b0b;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder {
+  color: #555555;
+}
+
+input:focus {
+  border-color: #f6e27a;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+}
+
+button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #000000;
+  background: linear-gradient(90deg, #b8932a, #f6e27a, #b8932a);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.mensaje {
+  margin: 1.25rem 0 0;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f6e27a;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 10px;
+}
